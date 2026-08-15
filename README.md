@@ -1,3 +1,2 @@
-## Microsoft AI-300: Operationalizing ML and GenAI Solutions
+## Microsoft AI-300: Operationalizing ML and GenAI Solutions Learning 
 
-![course_thumbnail](./Assets/course_thumbnail.png)
