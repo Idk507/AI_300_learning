@@ -1,0 +1,15 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: prep_churn_data
+display_name: Prepare churn data
+version: 1
+type: command
+inputs:
+  input_data: {type: uri_file}
+outputs:
+  output_data: {type: uri_folder}
+code: .
+environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu@latest
+command: >-
+  python prep.py --input_data ${{inputs.input_data}} --output_data ${{outputs.output_data}}
+
+  

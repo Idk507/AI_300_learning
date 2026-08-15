@@ -1,0 +1,15 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+name: evaluate_churn_model
+display_name: Evaluate churn model
+version: 1
+type: command
+inputs:
+  model_input: {type: uri_folder}
+outputs:
+  metrics_output: {type: uri_folder}
+code: .
+environment: azureml:AzureML-sklearn-1.0-ubuntu20.04-py38-cpu@latest
+command: >-
+  python evaluate.py --model_input ${{inputs.model_input}} --metrics_output ${{outputs.metrics_output}}
+
+  
